@@ -1,13 +1,13 @@
 <?php
 
-namespace Sunspikes\Tests\ClamavValidator\Helpers;
+namespace Noin\Tests\ClamavValidator\Helpers;
 
 use Illuminate\Container\Container;
 use Illuminate\Contracts\Translation\Translator;
 use Illuminate\Validation\Factory;
 use Illuminate\Validation\Validator;
 use Mockery;
-use Sunspikes\ClamavValidator\Rules\ClamAv;
+use Noin\ClamavValidator\Rules\ClamAv;
 
 /**
  * Validator Tests Helper

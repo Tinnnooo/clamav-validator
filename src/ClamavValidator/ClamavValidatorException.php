@@ -1,6 +1,6 @@
 <?php
 
-namespace Sunspikes\ClamavValidator;
+namespace Noin\ClamavValidator;
 
 use Exception;
 use Xenolope\Quahog\Result;

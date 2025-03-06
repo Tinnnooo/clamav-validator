@@ -1,6 +1,6 @@
 <?php
 
-namespace Sunspikes\ClamavValidator;
+namespace Noin\ClamavValidator;
 
 use Exception;
 use Illuminate\Contracts\Translation\Translator;
@@ -12,7 +12,7 @@ use Socket\Raw\Factory as SocketFactory;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 /**
- * @deprecated Use {@see \Sunspikes\ClamavValidator\Rules\ClamAv} validation rule instead.
+ * @deprecated Use {@see \Noin\ClamavValidator\Rules\ClamAv} validation rule instead.
  *
  * Clamav Validator
  */
@@ -54,27 +54,27 @@ class ClamavValidator extends Validator
             return true;
         }
 
-        if(is_array($value)) {
-        	$result = true;
-        	foreach($value as $file) {
-        		$result &= $this->validateFileWithClamAv($file);
-			}
+        if (is_array($value)) {
+            $result = true;
+            foreach ($value as $file) {
+                $result &= $this->validateFileWithClamAv($file);
+            }
 
-        	return $result;
-		}
+            return $result;
+        }
 
-		return $this->validateFileWithClamAv($value);
-	}
+        return $this->validateFileWithClamAv($value);
+    }
 
-	/**
-	 * Validate the single uploaded file for virus/malware with ClamAV.
-	 *
-	 * @param $value mixed
-	 *
-	 * @return bool
-	 * @throws ClamavValidatorException
-	 */
-	protected function validateFileWithClamAv($value): bool
+    /**
+     * Validate the single uploaded file for virus/malware with ClamAV.
+     *
+     * @param $value mixed
+     *
+     * @return bool
+     * @throws ClamavValidatorException
+     */
+    protected function validateFileWithClamAv($value): bool
     {
         if (is_resource($value)) {
             $stream = $value;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Sunspikes\Tests\ClamavValidator;
+namespace Noin\Tests\ClamavValidator;
 
 use Illuminate\Container\Container;
 use Illuminate\Contracts\Foundation\Application;
@@ -11,8 +11,8 @@ use Mockery;
 use Illuminate\Validation\Factory;
 use Illuminate\Support\Str;
 use PHPUnit\Framework\TestCase;
-use Sunspikes\ClamavValidator\ClamavValidator;
-use Sunspikes\ClamavValidator\ClamavValidatorServiceProvider;
+use Noin\ClamavValidator\ClamavValidator;
+use Noin\ClamavValidator\ClamavValidatorServiceProvider;
 
 class ClamavValidatorServiceProviderTest extends TestCase
 {

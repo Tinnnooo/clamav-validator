@@ -1,10 +1,10 @@
 <?php
 
-namespace Sunspikes\ClamavValidator;
+namespace Noin\ClamavValidator;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Str;
-use Sunspikes\ClamavValidator\Rules\ClamAv;
+use Noin\ClamavValidator\Rules\ClamAv;
 
 class ClamavValidatorServiceProvider extends ServiceProvider
 {
@@ -32,7 +32,7 @@ class ClamavValidatorServiceProvider extends ServiceProvider
 
         $this->publishes([
             __DIR__ . '/../lang' => method_exists($this->app, 'langPath') ?
-                $this->app->langPath().'/vendor/clamav-validator'
+                $this->app->langPath() . '/vendor/clamav-validator'
                 : $this->app->resourcePath('lang/vendor/clamav-validator'),
         ], 'lang');
 

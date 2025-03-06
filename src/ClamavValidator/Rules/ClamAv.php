@@ -1,12 +1,12 @@
 <?php
 
-namespace Sunspikes\ClamavValidator\Rules;
+namespace Noin\ClamavValidator\Rules;
 
 use Exception;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Config;
 use Socket\Raw\Factory as SocketFactory;
-use Sunspikes\ClamavValidator\ClamavValidatorException;
+use Noin\ClamavValidator\ClamavValidatorException;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Xenolope\Quahog\Client as QuahogClient;
 
@@ -31,9 +31,9 @@ class ClamAv
             return true;
         }
 
-        if(is_array($value)) {
+        if (is_array($value)) {
             $result = true;
-            foreach($value as $file) {
+            foreach ($value as $file) {
                 $result &= $this->validateFileWithClamAv($file);
             }
 
