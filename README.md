@@ -43,7 +43,7 @@ You will also need to have `sockets` extension installed and enabled (all execut
 #### 1. Install the package through [Composer](http://getcomposer.org).
    
    ```bash
-   $ composer require sunspikes/clamav-validator
+   $ composer require noin/clamav-validator
    ```
 
 #### 2. Add the service provider (for Laravel 5.4 or below)
